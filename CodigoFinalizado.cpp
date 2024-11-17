@@ -1,6 +1,6 @@
 // P_integrador.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //Janerys M. Ortiz Aviles 
-//Lewis Diaz Acevedo
+//Lewis A Díaz Acevedo
 
 #include <iostream>
 #include <string>
@@ -61,7 +61,7 @@ int main() {
     MyFile.close();
     do{
     
-    // Menu de opciones
+    // Menu de opciones:
     
         cout << "Bienvenidos a las votaciones de series!" << endl;
         cout << "1. Deseo participar de las votaciones" << endl;
@@ -87,7 +87,7 @@ int main() {
             
             
             }
-            //La funcion stoi hace un cambio de string a entero
+            //La funcion stoi hace un cambio de string a entero.
                 id_unico = stoi(id_unico1);
                 // Verificar si el ID ya está registrado.
                 while (ids.count(id_unico) > 0) {
@@ -103,7 +103,7 @@ int main() {
             
             
             
-            // Votacion de la categoria 1: Series Live Action
+            // Votacion de la categoria 1: Series Live Action:
             cout << "\n\n\nCategoria #1: Series Live Action" << endl;
             for (const auto& serie : series_categoria_1) {
                 cout << serie.first << ". " << serie.second << endl;
@@ -120,7 +120,7 @@ int main() {
             cout << endl << endl << endl;
 
 
-            // Votacion de la categoria 2: Series de Anime
+            // Votacion de la categoria 2: Series de Anime:
             cout << "Categoria #2: Series de Anime" << endl;
             for (const auto& serie : series_categoria_2) {
                 cout << serie.first << ". " << serie.second << endl;
@@ -137,7 +137,7 @@ int main() {
             } while (categoria_2 < 1 || categoria_2 > 4);
             cout << endl << endl << endl;
 
-            // Votacion de la categoría 3: Series Animadas
+            // Votacion de la categoría 3: Series Animadas:
             cout << "Categoria #3: Series Animadas" << endl;
             for (const auto& serie : series_categoria_3) {
                 cout << serie.first << ". " << serie.second << endl;
@@ -154,7 +154,7 @@ int main() {
             } while (categoria_3 < 1 || categoria_3 > 4);
             cout << endl << endl << endl;
 
-            // Registrar los votos en los mapas
+            // Registrar los votos en los mapas...
             votos_categoria_1[series_categoria_1[categoria_1]]++;
             votos_categoria_2[series_categoria_2[categoria_2]]++;
             votos_categoria_3[series_categoria_3[categoria_3]]++;
@@ -189,7 +189,7 @@ int main() {
         cout << serie.first << ": " << serie.second << " votos" << endl;
     }
 
-    // Imprime los resultados en el archivo. Esto es lo que sale en pantalla
+    // Imprime los resultados en el archivo. Esto es lo que sale en pantalla:
     Myfile << "Resultados de las votaciones:\n\n" << endl;
     cout << endl; // El \n es para espacio y que se vea mas organizado 
     Myfile << "Categoria #1: Series Live Action: \n" << endl;
